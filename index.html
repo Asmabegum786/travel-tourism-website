@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>TravelGo - Travel & Tourism</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+
+    <header>
+
+        <div class="logo">
+            🌍 TravelGo
+        </div>
+
+        <nav>
+
+            <a href="#home">Home</a>
+
+            <a href="#destinations">Destinations</a>
+
+            <a href="#packages">Packages</a>
+
+            <a href="#about">About</a>
+
+            <a href="#contact">Contact</a>
+
+        </nav>
+
+        <button onclick="openBooking()">
+            Book Now
+        </button>
+
+    </header>
+
+
+    <!-- Hero Section -->
+
+    <section id="home" class="hero">
+
+        <div class="hero-content">
+
+            <h1>
+                Explore The World
+            </h1>
+
+            <p>
+                Discover beautiful destinations
+                and create unforgettable memories.
+            </p>
+
+            <a href="#destinations"
+               class="hero-button">
+                Explore Destinations
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- Destinations -->
+
+    <section id="destinations">
+
+        <h2>Popular Destinations</h2>
+
+        <p class="section-text">
+            Explore some of the world's most beautiful places.
+        </p>
+
+
+        <div class="destination-container">
+
+
+            <div class="destination-card">
+
+                <div class="destination-image paris">
+                    🗼
+                </div>
+
+                <h3>Paris</h3>
+
+                <p>
+                    Experience the beauty of the
+                    Eiffel Tower and French culture.
+                </p>
+
+                <button onclick="showDestination('Paris')">
+                    Explore
+                </button>
+
+            </div>
+
+
+            <div class="destination-card">
+
+                <div class="destination-image bali">
+                    🏝️
+                </div>
+
+                <h3>Bali</h3>
+
+                <p>
+                    Enjoy beautiful beaches,
+                    nature and peaceful surroundings.
+                </p>
+
+                <button onclick="showDestination('Bali')">
+                    Explore
+                </button>
+
+            </div>
+
+
+            <div class="destination-card">
+
+                <div class="destination-image dubai">
+                    🏙️
+                </div>
+
+                <h3>Dubai</h3>
+
+                <p>
+                    Discover modern architecture,
+                    shopping and desert adventures.
+                </p>
+
+                <button onclick="showDestination('Dubai')">
+                    Explore
+                </button>
+
+            </div>
+
+
+            <div class="destination-card">
+
+                <div class="destination-image london">
+                    🎡
+                </div>
+
+                <h3>London</h3>
+
+                <p>
+                    Visit historic landmarks,
+                    museums and beautiful parks.
+                </p>
+
+                <button onclick="showDestination('London')">
+                    Explore
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Packages -->
+
+    <section id="packages" class="packages">
+
+        <h2>Travel Packages</h2>
+
+        <p class="section-text">
+            Choose a package for your next adventure.
+        </p>
+
+
+        <div class="package-container">
+
+
+            <div class="package-card">
+
+                <h3>Basic Package</h3>
+
+                <h4>₹15,000</h4>
+
+                <p>3 Days / 2 Nights</p>
+
+                <p>Hotel Accommodation</p>
+
+                <p>Breakfast</p>
+
+                <p>Local Sightseeing</p>
+
+                <button onclick="openBooking()">
+                    Book Package
+                </button>
+
+            </div>
+
+
+            <div class="package-card popular">
+
+                <span class="popular-label">
+                    Popular
+                </span>
+
+                <h3>Premium Package</h3>
+
+                <h4>₹30,000</h4>
+
+                <p>5 Days / 4 Nights</p>
+
+                <p>Luxury Hotel</p>
+
+                <p>Breakfast & Dinner</p>
+
+                <p>Tour Guide</p>
+
+                <button onclick="openBooking()">
+                    Book Package
+                </button>
+
+            </div>
+
+
+            <div class="package-card">
+
+                <h3>Family Package</h3>
+
+                <h4>₹45,000</h4>
+
+                <p>7 Days / 6 Nights</p>
+
+                <p>Family Hotel</p>
+
+                <p>All Meals</p>
+
+                <p>Private Transport</p>
+
+                <button onclick="openBooking()">
+                    Book Package
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- About -->
+
+    <section id="about" class="about">
+
+        <h2>About TravelGo</h2>
+
+        <p>
+            TravelGo is a simple travel and tourism website
+            designed to help travelers explore popular
+            destinations and choose suitable travel packages.
+            Our goal is to make trip planning simple and
+            convenient.
+        </p>
+
+    </section>
+
+
+    <!-- Contact -->
+
+    <section id="contact">
+
+        <h2>Contact Us</h2>
+
+        <div class="contact-form">
+
+            <input
+                type="text"
+                id="contactName"
+                placeholder="Your Name"
+            >
+
+            <input
+                type="email"
+                id="contactEmail"
+                placeholder="Your Email"
+            >
+
+            <textarea
+                id="contactMessage"
+                placeholder="Your Message">
+            </textarea>
+
+            <button onclick="sendMessage()">
+                Send Message
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- Booking Popup -->
+
+    <div id="booking-popup"
+         class="popup">
+
+        <div class="booking-box">
+
+            <span class="close"
+                  onclick="closeBooking()">
+                &times;
+            </span>
+
+            <h2>Book Your Trip</h2>
+
+            <input
+                type="text"
+                id="bookingName"
+                placeholder="Full Name"
+            >
+
+            <input
+                type="email"
+                id="bookingEmail"
+                placeholder="Email"
+            >
+
+            <select id="destination">
+
+                <option value="">
+                    Select Destination
+                </option>
+
+                <option value="Paris">
+                    Paris
+                </option>
+
+                <option value="Bali">
+                    Bali
+                </option>
+
+                <option value="Dubai">
+                    Dubai
+                </option>
+
+                <option value="London">
+                    London
+                </option>
+
+            </select>
+
+            <input
+                type="date"
+                id="travelDate"
+            >
+
+            <input
+                type="number"
+                id="travelers"
+                placeholder="Number of Travelers"
+                min="1"
+            >
+
+            <button onclick="bookTrip()">
+                Confirm Booking
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p>
+            © 2026 TravelGo - Travel & Tourism Website
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

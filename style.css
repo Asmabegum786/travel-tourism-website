@@ -1,0 +1,460 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background: #f7fbff;
+}
+
+
+/* Header */
+
+header {
+    background: #0077b6;
+    color: white;
+
+    padding: 18px 7%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+header button {
+    background: white;
+    color: #0077b6;
+
+    border: none;
+
+    padding: 10px 18px;
+
+    border-radius: 20px;
+
+    cursor: pointer;
+
+    font-weight: bold;
+}
+
+
+/* Hero */
+
+.hero {
+    min-height: 550px;
+
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.45),
+            rgba(0, 0, 0, 0.45)
+        ),
+        url("https://images.unsplash.com/photo-1488646953014-85cb44e25828")
+        center/cover;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    color: white;
+}
+
+.hero-content {
+    max-width: 700px;
+}
+
+.hero h1 {
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 22px;
+    margin-bottom: 35px;
+}
+
+.hero-button {
+    background: #00b4d8;
+    color: white;
+
+    padding: 15px 30px;
+
+    border-radius: 30px;
+
+    text-decoration: none;
+
+    font-weight: bold;
+}
+
+
+/* Sections */
+
+section {
+    padding: 70px 7%;
+    text-align: center;
+}
+
+section h2 {
+    color: #0077b6;
+    font-size: 36px;
+    margin-bottom: 12px;
+}
+
+.section-text {
+    margin-bottom: 40px;
+    color: #666;
+}
+
+
+/* Destinations */
+
+.destination-container {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(220px, 1fr));
+
+    gap: 25px;
+}
+
+.destination-card {
+    background: white;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 4px 15px rgba(0,0,0,0.1);
+
+    transition: 0.3s;
+
+    padding-bottom: 25px;
+}
+
+.destination-card:hover {
+    transform: translateY(-8px);
+}
+
+.destination-image {
+    height: 180px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 80px;
+}
+
+.paris {
+    background: #e0f7fa;
+}
+
+.bali {
+    background: #dcedc8;
+}
+
+.dubai {
+    background: #fff3e0;
+}
+
+.london {
+    background: #e8eaf6;
+}
+
+.destination-card h3 {
+    font-size: 25px;
+
+    margin: 20px 0 10px;
+}
+
+.destination-card p {
+    padding: 0 20px;
+
+    color: #666;
+
+    line-height: 1.5;
+}
+
+.destination-card button {
+    margin-top: 20px;
+}
+
+
+/* Buttons */
+
+button {
+    background: #0077b6;
+
+    color: white;
+
+    border: none;
+
+    padding: 12px 22px;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+}
+
+button:hover {
+    background: #005f8f;
+}
+
+
+/* Packages */
+
+.packages {
+    background: #eaf8ff;
+}
+
+.package-container {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(230px, 1fr));
+
+    gap: 25px;
+}
+
+.package-card {
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 4px 15px rgba(0,0,0,0.1);
+
+    position: relative;
+}
+
+.package-card h3 {
+    font-size: 25px;
+
+    color: #0077b6;
+
+    margin-bottom: 15px;
+}
+
+.package-card h4 {
+    font-size: 30px;
+
+    color: #00a896;
+
+    margin-bottom: 20px;
+}
+
+.package-card p {
+    margin: 12px 0;
+
+    color: #555;
+}
+
+.package-card button {
+    margin-top: 15px;
+}
+
+.popular {
+    border: 3px solid #00b4d8;
+}
+
+.popular-label {
+    position: absolute;
+
+    top: 10px;
+    right: 10px;
+
+    background: #00b4d8;
+
+    color: white;
+
+    padding: 5px 10px;
+
+    border-radius: 15px;
+
+    font-size: 12px;
+}
+
+
+/* About */
+
+.about {
+    background: #caf0f8;
+}
+
+.about p {
+    max-width: 750px;
+
+    margin: auto;
+
+    line-height: 1.8;
+
+    font-size: 18px;
+}
+
+
+/* Contact */
+
+.contact-form {
+    max-width: 500px;
+
+    margin: 30px auto;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea,
+.booking-box input,
+.booking-box select {
+    width: 100%;
+
+    padding: 14px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 5px;
+
+    font-size: 16px;
+}
+
+.contact-form textarea {
+    height: 120px;
+}
+
+
+/* Popup */
+
+.popup {
+    display: none;
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0,0,0,0.6);
+
+    z-index: 2000;
+}
+
+.booking-box {
+    background: white;
+
+    width: 420px;
+
+    max-width: 90%;
+
+    margin: 80px auto;
+
+    padding: 30px;
+
+    border-radius: 12px;
+
+    position: relative;
+}
+
+.booking-box h2 {
+    margin-bottom: 20px;
+}
+
+.booking-box input,
+.booking-box select {
+    margin-bottom: 15px;
+}
+
+.booking-box button {
+    width: 100%;
+}
+
+.close {
+    position: absolute;
+
+    right: 20px;
+    top: 10px;
+
+    font-size: 30px;
+
+    cursor: pointer;
+}
+
+
+/* Footer */
+
+footer {
+    background: #023e8a;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 25px;
+}
+
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+
+}
